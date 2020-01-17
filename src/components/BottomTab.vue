@@ -1,6 +1,7 @@
 <template>
   <div class="navbar">
     <div class="colum">
+
       <b-button 
           id         = "play-btn"
           class      = "controls-panel__btn"
@@ -18,6 +19,7 @@
         outlined
       >
       </b-button>
+
     </div>
   </div>
 </template>

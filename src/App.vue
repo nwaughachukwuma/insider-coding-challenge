@@ -39,7 +39,8 @@
         this.$buefy.dialog.alert({
             title: 'Game Over 😔',
             message: 'Your teeter-totter went out of balance.',
-            confirmText: 'Try again'
+            confirmText: 'Try again',
+            onConfirm: () => this.initGame()
         })
       }
     }
