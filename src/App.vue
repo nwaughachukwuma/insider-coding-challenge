@@ -36,16 +36,10 @@
     methods: {
       ...mapActions([ 'initGame' ]),
       showModal: function() {
-        this.$swal({
-          title: 'Game Over 😔',
-          text: "Your teeter-totter went out of balance.",
-          icon: 'info',
-          confirmButtonColor: '#3085d6',
-          confirmButtonText: 'Try again'
-        }).then((result) => {
-          if (result.value) {
-            this.initGame()
-          }
+        this.$buefy.dialog.alert({
+            title: 'Game Over 😔',
+            message: 'Your teeter-totter went out of balance.',
+            confirmText: 'Try again'
         })
       }
     }
