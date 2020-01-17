@@ -2,6 +2,7 @@
     <div
         class  = "shape"
         :class = "shapeClasses"
+        style="animation-delay: 0.3s animation-duration: 0.7s"
     >
         <div class="shape__weight"> {{ shape.weight }} kg </div>
     </div>
@@ -9,6 +10,7 @@
 
 <script>
     import { CIRCLE, TRIANGLE, SQUARE } from '@/constants/shape';
+    import {mapState} from 'vuex';
 
     export default {
         name  : 'Shape',
@@ -29,13 +31,16 @@
             }
         },
         computed: {
+            ...mapState([ 'isModalShown' ]),
             shapeClasses() {
                 const { type } = this.shape;
 
                 return {
                     'shape--square'   : type === SQUARE,
                     'shape--triangle' : type === TRIANGLE,
-                    'shape--circle'   : type === CIRCLE
+                    'shape--circle'   : type === CIRCLE,
+                    // 'lni-flashing-effect': this.isModalShown,
+                    "animated fadeOutDown": this.isModalShown,
                 };
             }
         },

@@ -36,12 +36,14 @@
     methods: {
       ...mapActions([ 'initGame' ]),
       showModal: function() {
-        this.$buefy.dialog.alert({
+        setTimeout(() => {
+          this.$buefy.dialog.alert({
             title: 'Game Over 😔',
             message: 'Your teeter-totter went out of balance.',
             confirmText: 'Try again',
             onConfirm: () => this.initGame()
-        })
+          })
+        }, 1000)
       }
     }
 	};
