@@ -1,8 +1,10 @@
-# teeter-totter
+# Insider coding challenge
+### My Vue.js Solution to the Teeter-Totter challenge
 
 ## Project setup
 ```
-yarn install
+- clone the repository
+- install the depecies: yarn/npm install
 ```
 
 ### Compiles and hot-reloads for development
