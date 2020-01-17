@@ -2,7 +2,7 @@
     <div
         class  = "shape"
         :class = "shapeClasses"
-        style="animation-delay: 0.3s animation-duration: 0.7s"
+        style="animation-delay: 0.2s animation-duration: 0.7s"
     >
         <div class="shape__weight"> {{ shape.weight }} kg </div>
     </div>
@@ -39,8 +39,7 @@
                     'shape--square'   : type === SQUARE,
                     'shape--triangle' : type === TRIANGLE,
                     'shape--circle'   : type === CIRCLE,
-                    // 'lni-flashing-effect': this.isModalShown,
-                    "animated fadeOutDown": this.isModalShown,
+                    "animated hinge": this.isModalShown,
                 };
             }
         },
